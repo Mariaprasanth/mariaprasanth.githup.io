@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.master.cs" Inherits="MP_Project.Dashboard" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Maria Prasanth</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+       <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+     <%--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>--%>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+   
+
+
+    <link href="CSS/Home.css" rel="stylesheet" />
+    <link href="CSS/Content.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+         <nav class="navbar navbar-expand-lg navbar-light" id="nav_bar">
+            <div class="container" id="left"></div>
+         <div class="container">
+             
+              <%--<a class="navbar-brand" href="#"></a>--%>
+              <a class="navbar-brand" href="Img/mp1.png" id="img">
+
+                 <img src="Img/mp1.png" alt="profesional" width="100" height="60" />
+             </a>
+        
+
+                    <button class="navbar-toggler bg-light btn1" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" style="color:#ccc;"></span>
+                    </button>
+
+            
+           <%-- <a class="navbar-brand text-hide" href="#"></a>--%>
+
+         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      
+                    <li class="nav-item active">
+            
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            
+                    </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#mySkill">Skills</a>
+                  </li>
+
+                <%--  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Projects</a>
+                  </li>--%>
+                    
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"   data-target="#carouselExampleIndicators" data-slide-to="1" >About</a>
+                  </li>
+                   
+                        
+                
+             </ul>
+
+  </div>
+              </div>
+             <div class="container" id="right"></div>
+</nav>
+            
+        <div class="jumbotron-fluid title justify-content-end">
+     
+           <div class="txt">
+               
+               <span class="fast-flicker">M</span>aria
+               <span class="fast-flicker">&nbsp;</span> 
+               <span class="flicker">P</span>rasanth
+
+           </div>  
+            <br />
+            <div class="txt1">
+               <span class="fast-flicker">W</span>eb
+               <span class="fast-flicker">&nbsp;</span> 
+               <span class="flicker">D</span>eveloper
+              
+                 <span class="flicker"><asp:ImageButton ID="cv"  runat="server" ImageUrl="~/Img/icons8-file-64.png"   OnClick="Resume_Download" /></span>
+            </div>
+            <%--<h3>Web Developer</h3> <asp:ImageButton ID="cv" runat="server" ImageUrl="~/Img/icons8-file-64.png"   OnClick="Resume_Download" />--%>
+              <%--     <h2>
+                Maria Prasanth
+            </h2>--%>
+                
+        </div>
+  
+         
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+        
+     <footer class="pagination-lg">
+         <div class="container-fluid ft">
+             <div class="row">
+                 <div class="col-6">
+                      <a href="#" id="foot"><i class="fa fa-copyright">2021 by Maria Prasanth</i></a>
+                 </div>
+                 <div class="col-6 ">
+                     <div class="row">
+                          <div class="col-3"  ><a href="#"><i class="fa fa-instagram" id="in"></i></a></div>
+                          <div class="col-3 "><a href="#"><i class="fa fa-google" id="google"></i></a></div>
+                          <div class="col-3"><a href="#" ><i class="fa fa-linkedin" id="lin"></i></a></div>
+                     </div>
+                    
+                 </div>
+             </div>
+         </div>
+     </footer>
+         <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title mt">Smart Mines </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <p>Smart Mines is a website developed by Asp.net 4.5</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    </form>
+</body>
+</html>
